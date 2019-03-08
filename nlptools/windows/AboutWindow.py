@@ -1,7 +1,9 @@
 # from PyQt5.QtGui import Qwid
-from PyQt5.QtWidgets import QLabel, QWidget, QVBoxLayout, QPushButton, QHBoxLayout
-from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import (QHBoxLayout, QLabel, QPushButton, QVBoxLayout,
+                             QWidget)
+
 from .BaseWindow import BaseWindow
 from .MainWindows import MainWindow
 

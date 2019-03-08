@@ -1,5 +1,5 @@
-from os import path
 from collections import defaultdict
+from os import path
 from threading import Thread
 
 

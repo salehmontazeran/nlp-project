@@ -1,8 +1,11 @@
-from PyQt5.QtWidgets import QAction
 from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QAction
+
+from languages.lang import lang
+
 from .BaseWindow import BaseWindow
 from .TokenizationWindow import TokenizationWindow
-from languages.lang import lang
+
 # from ..kernels.tokenization import ali
 
 

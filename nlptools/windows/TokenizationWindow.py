@@ -1,9 +1,13 @@
 from os import path
-from .BaseWindow import BaseWindow
-from languages.lang import lang
-from PyQt5.QtWidgets import QFileDialog, QLabel, QHBoxLayout, QPushButton, QWidget, QVBoxLayout, QMessageBox
+
 from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import (QFileDialog, QHBoxLayout, QLabel, QMessageBox,
+                             QPushButton, QVBoxLayout, QWidget)
+
+from languages.lang import lang
+
 from ..kernels.tokenization import Tokenization
+from .BaseWindow import BaseWindow
 
 
 class TokenizationWindow(BaseWindow):
@@ -53,14 +57,18 @@ class TokenizationWindow(BaseWindow):
 
     @pyqtSlot()
     def selectFile(self):
-        fileName, _ = QFileDialog.getOpenFileName(self, lang[self.lang]["inputSelect"], "", "All Files (*)")
+        fileName, _ = QFileDialog.getOpenFileName(
+            self, lang[self.lang]["inputSelect"], "", "All Files (*)"
+        )
         if fileName:
             self.firstPush.setText(path.basename(fileName))
         self.inFile = fileName
 
     @pyqtSlot()
     def selectDir(self):
-        dirName = QFileDialog.getExistingDirectory(self, lang[self.lang]["outputSelect"])
+        dirName = QFileDialog.getExistingDirectory(
+            self, lang[self.lang]["outputSelect"]
+        )
         if dirName:
             self.secondPush.setText(path.basename(path.normpath(dirName)))
         self.output = dirName
