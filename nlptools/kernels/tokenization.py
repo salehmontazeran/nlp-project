@@ -7,9 +7,10 @@ class Tokenization():
     def __init__(self, inFile="", outPath=""):
         self.inFile = inFile
         self.outPath = outPath
+        self.inFileName = path.basename(self.inFile)[:-4]
 
     def token(self):
-        output = path.join(self.outPath, 'token.txt')
+        output = path.join(self.outPath, self.inFileName + ' - token.txt')
         with open(output, 'w', encoding='utf8') as o:
             with open(self.inFile, 'r', encoding='utf8') as i:
                 line = i.readline()
@@ -29,10 +30,11 @@ class Tokenization():
                 line = line.strip()
                 words = line.split(' ')
                 for w in words:
-                    s.add(w)
+                    if w:
+                        s.add(w)
                 line = i.readline()
 
-        output = path.join(self.outPath, 'tokenType.txt')
+        output = path.join(self.outPath, self.inFileName + ' - tokenType.txt')
         with open(output, 'w', encoding='utf8') as o:
             for e in s:
                 o.write(e)
@@ -49,7 +51,9 @@ class Tokenization():
                     h[w] = h[w] + 1
                 line = i.readline()
 
-        output = path.join(self.outPath, 'tokenNumber.txt')
+        output = path.join(
+            self.outPath, self.inFileName + ' - tokenNumber.txt'
+            )
         with open(output, 'w', encoding='utf8') as o:
             for e in h:
                 t = '{:20s} {:6d}'.format(e, h[e])

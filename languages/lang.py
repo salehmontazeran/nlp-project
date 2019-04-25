@@ -8,7 +8,17 @@ lang = {
         "outputSelect": "Select your output directory",
         "browse": "browse",
         "successful": "successful",
-        "fail": "fail"
+        "fail": "fail",
+        "pos": "POSTagger",
+        "spell": "Spelling",
+        "topic": "Topic model",
+        "topicfa": "topic modeling for farsi",
+        "topicen": "topic modeling for english",
+        "go": "search",
+        "ws": "word processor",
+        "syn": "synonyms",
+        "ant": "antonyms",
+        "remove": "remove external words"
 
     },
     "fa": {
@@ -20,6 +30,16 @@ lang = {
         "outputSelect": "پوشه خروجی را انتخاب کنید",
         "browse": "مرور کردن",
         "successful": "موفقیت",
-        "fail": "شکست"
+        "fail": "شکست",
+        "pos": "برچسب گذاری",
+        "spell": "املا",
+        "topic": "مدل موضوع",
+        "topicfa": "مدل موضوع در فارسی",
+        "topicen": "مدل موضوع در انگلیسی",
+        "go": "جست و جو",
+        "ws": "پردازنده کلمه",
+        "syn": "مترادف ها",
+        "ant": "متضاد ها",
+        "remove": "حذف کلمات خارجی"
     }
 }
